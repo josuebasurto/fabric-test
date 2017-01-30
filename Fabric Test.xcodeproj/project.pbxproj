@@ -41,13 +41,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA29741E1E3F17B8007322F6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CA4139A21E3F079C00F5C650 /* Fabric.framework */,
+				CA4139A31E3F079C00F5C650 /* Crashlytics.framework */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		CA8EDB5C1E3F011500798146 = {
 			isa = PBXGroup;
 			children = (
+				CA29741E1E3F17B8007322F6 /* Packages */,
 				CA8EDB671E3F011500798146 /* Fabric Test */,
 				CA8EDB661E3F011500798146 /* Products */,
-				CA4139A21E3F079C00F5C650 /* Fabric.framework */,
-				CA4139A31E3F079C00F5C650 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
