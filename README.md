@@ -13,3 +13,5 @@ You could use this app to check if you have questions, or compare.
 ## Screens
 
 ![App Icon](/Docs/Images/IMG_0940.PNG)
+
+![App Icon](/Docs/Images/IMG_0941.PNG)
