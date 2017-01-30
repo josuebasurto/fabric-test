@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        Fabric.with([Crashlytics.self])
+        return true;
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,6 +44,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        // TODO: Move this to where you establish a user session
+        self.logUser()
+
+    }
+    
+    func logUser() {
+        // TODO: Use the current user's information
+        // You can call any combination of these three methods
+        Crashlytics.sharedInstance().setUserEmail("testuser@fabric.io")
+        Crashlytics.sharedInstance().setUserIdentifier("1")
+        Crashlytics.sharedInstance().setUserName("Josue Basurto Rocks!")
+    }
+
+
 
 
 }
